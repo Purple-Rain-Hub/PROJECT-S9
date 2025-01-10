@@ -1,8 +1,10 @@
 import { Component } from "react";
+import { Spinner } from "react-bootstrap";
 
 class NetRow extends Component {
   state = {
     shows: [],
+    isLoading: true,
   };
 
   getShows = async () => {
@@ -16,12 +18,16 @@ class NetRow extends Component {
         console.log("data", data.Search);
         this.setState({
           shows: data.Search,
+          isLoading: false,
         });
       } else {
         throw new Error("errore mannaggia");
       }
     } catch (error) {
       console.log(error);
+      this.setState({
+        isLoading: false,
+      });
     }
   };
 
@@ -32,6 +38,11 @@ class NetRow extends Component {
   render() {
     return (
       <>
+        {this.state.isLoading && (
+          <div className="text-center">
+            <Spinner animation="border" variant="danger" />
+          </div>
+        )}
         {this.state.shows.map((shows) => {
           return (
             <div key={shows.imdbID} className="col mb-2 text-center px-1">
