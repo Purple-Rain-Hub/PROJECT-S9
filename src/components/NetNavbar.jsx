@@ -29,18 +29,30 @@ class NetNavbar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active fw-bold" href="#">
+                <a
+                  className="nav-link active fw-bold"
+                  href="#"
+                  onClick={() => this.props.handleChangePage(1)}
+                >
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-bold" href="#">
-                  TV Shows
+                <a
+                  className="nav-link fw-bold"
+                  href="#"
+                  onClick={() => this.props.handleChangePage(2)}
+                >
+                  Settings
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-bold" href="#">
-                  Movies
+                <a
+                  className="nav-link fw-bold"
+                  href="#"
+                  onClick={() => this.props.handleChangePage(3)}
+                >
+                  Profile
                 </a>
               </li>
               <li className="nav-item">

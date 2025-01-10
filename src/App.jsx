@@ -5,15 +5,35 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 import NetFooter from "./components/NetFooter";
 import NetHomeContent from "./components/NetHomeContent";
+import { Component } from "react";
+import NetProfile from "./components/NetProfile";
+import NetSettings from "./components/NetSettings";
 
-function App() {
-  return (
-    <>
-      <NetNavbar />
-      <NetHomeContent />
-      <NetFooter />
-    </>
-  );
+class App extends Component {
+  state = {
+    showPage: 1,
+  };
+
+  handleChangePage = (num) => {
+    this.setState({ showPage: num });
+    console.log("funziona! sono gay " + this.state.showPage);
+  };
+
+  render() {
+    return (
+      <>
+        <NetNavbar handleChangePage={this.handleChangePage} />
+        {this.state.showPage == 1 ? (
+          <NetHomeContent />
+        ) : this.state.showPage == 2 ? (
+          <NetProfile />
+        ) : (
+          <NetSettings />
+        )}
+        <NetFooter />
+      </>
+    );
+  }
 }
 
 export default App;
