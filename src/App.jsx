@@ -16,7 +16,6 @@ class App extends Component {
 
   handleChangePage = (num) => {
     this.setState({ showPage: num });
-    console.log("funziona! " + this.state.showPage);
   };
 
   render() {

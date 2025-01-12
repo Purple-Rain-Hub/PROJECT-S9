@@ -9,7 +9,7 @@ class NetProfile extends Component {
           <div>
             <h1 className="text-white mt-5">Edit Profile</h1>
             <div className="py-4 d-lg-flex align-items-start border-top border-bottom border-dark border-2">
-              <img src="" width="110px" className="me-3" />
+              <img src="public/avatar.png" width="110px" className="me-3" />
               <div className="mt-3 mt-lg-0">
                 <div>
                   <input

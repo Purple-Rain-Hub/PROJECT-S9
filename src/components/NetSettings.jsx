@@ -4,7 +4,7 @@ import "../style.css";
 class NetSettings extends Component {
   render() {
     return (
-      <body className="bg-white">
+      <div className="bg-white">
         <main className="w-75 m-auto py-5">
           <h1 className="h2">Account</h1>
           <hr className="border border-secondary my-3" />
@@ -36,7 +36,7 @@ class NetSettings extends Component {
               <hr className="border border-secondary my-3" />
               <div className="d-flex justify-content-between">
                 <div>
-                  <img src="assets/media/paypal-conto.webp" width="80em" />
+                  <img src="public/paypal-conto.webp" width="80em" />
                   <p className="text-black fw-bold">Epicoder1@gmail.com</p>
                 </div>
                 <div>
@@ -57,21 +57,21 @@ class NetSettings extends Component {
             </div>
           </div>
           <hr className="border border-secondary my-3" />
-          <div className="d-md-flex justify-content-md-between">
-            <div className="d-md-flex justify-content-lg-between plan">
-              <h2 className="h4 text-secondary">PLAN DETAILS</h2>
-              <p className="fw-bold ms-3">
+          <div className="row">
+            <div className="col-10 row">
+              <h2 className="col-5 h4 text-secondary">PLAN DETAILS</h2>
+              <p className="col-4 fw-bold">
                 Standard<i className="bi bi-badge-hd"></i>
               </p>
             </div>
-            <a href="javscript:void(0)" className="text-end">
+            <a href="javscript:void(0)" className="col-2 text-end">
               Change plan
             </a>
           </div>
           <hr className="border border-secondary my-3" />
-          <div className="d-md-flex justify-content-lg-between settings">
-            <h2 className="h4 text-secondary me-md-5">SETTINGS</h2>
-            <div>
+          <div className="row settings">
+            <h2 className="col-6 h4 text-secondary me-md-5">SETTINGS</h2>
+            <div className="col-4">
               <a
                 href="javscript:void(0)"
                 className="d-block ms-md-3 mt-3 mt-md-0"
@@ -96,15 +96,12 @@ class NetSettings extends Component {
             </div>
           </div>
           <hr className="border border-secondary my-3" />
-          <div className="d-md-flex justify-content-lg-between myProfile">
-            <h2 className="h4 text-secondary">MY PROFILE</h2>
-            <div className="ms-md-5">
+          <div className="row myProfile">
+            <h2 className="col-6 h4 text-secondary">MY PROFILE</h2>
+            <div className="col-6">
               <div className="d-flex justify-content-between">
                 <p className="fw-bold">
-                  <img
-                    src="assets/media/avatar.png"
-                    style={{ width: "35px" }}
-                  />
+                  <img src="public/avatar.png" style={{ width: "35px" }} />
                   &nbsp; Epicoder #1
                 </p>
                 <div className="ms-md-5">
@@ -134,7 +131,7 @@ class NetSettings extends Component {
             </div>
           </div>
         </main>
-      </body>
+      </div>
     );
   }
 }
