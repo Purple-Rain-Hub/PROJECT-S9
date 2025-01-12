@@ -4,7 +4,7 @@ class NetNavbar extends Component {
   render() {
     return (
       <nav
-        className="navbar navbar-expand-lg bg-dark"
+        className="navbar navbar-expand-lg"
         data-bs-theme="dark"
         style={{ backgroundColor: "#221f1f" }}
       >
@@ -43,7 +43,7 @@ class NetNavbar extends Component {
                   href="#"
                   onClick={() => this.props.handleChangePage(2)}
                 >
-                  Settings
+                  Profile
                 </a>
               </li>
               <li className="nav-item">
@@ -52,7 +52,7 @@ class NetNavbar extends Component {
                   href="#"
                   onClick={() => this.props.handleChangePage(3)}
                 >
-                  Profile
+                  Settings
                 </a>
               </li>
               <li className="nav-item">

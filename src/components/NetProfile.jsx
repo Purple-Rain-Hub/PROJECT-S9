@@ -5,7 +5,7 @@ class NetProfile extends Component {
   render() {
     return (
       <>
-        <main className="bg-netflix d-flex flex-column align-items-center  pb-5">
+        <main className="bg-netflix d-flex flex-column align-items-center pb-5">
           <div>
             <h1 className="text-white mt-5">Edit Profile</h1>
             <div className="py-4 d-lg-flex align-items-start border-top border-bottom border-dark border-2">
